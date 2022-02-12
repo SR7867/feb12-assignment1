@@ -1,0 +1,44 @@
+#bill>5000 coupon code-MYBILL-10%
+#bill>3000 coupon code-HELLO-8%
+#bill>2000 coupon code-OFFER-5%
+#bill>1000 coupon code-SALE-3%
+oil
+oil=2000
+wf=1000
+bg=1000
+milk=1000
+ghee=1000
+cc='coupon code'
+cname=input('enter customer name: ')
+cphno=input('enter customer phno: ')
+oilq=int(input('enter no of oil packets: '))
+wfq=int(input('enter no of wheet flour packets: '))
+bgq=int(input('enter no of black gram packets: '))
+milkq=int(input('enter no of milk packets: '))
+gheeq=int(input('enter no of ghee packets: '))
+o=oil*oilq
+w=wf*wfq
+b=bg*bgq
+m=milk*milkq
+g=ghee*gheeq
+bill=o+w+b+m+g
+if(bill>5000):
+    if(cc=='MYBILL'):
+        dis=bill*10/100
+        tax=bill*10/100
+    elif(bill>3000):
+        if(cc=='HELLO'):
+            dis=bill*8/100
+            tax=bill*10/100
+    elif(bill>2000):
+        if(cc=='OFFER'):
+            dis=bill*5/100
+            tax=bill*18/100
+    elif(bill>1000):
+        if(cc=='SALE'):
+            dis=bill*3/100
+            tax=bill*18/100
+else:
+    print('invalid coupan code')
+    mainbill=bill-dis+tax
+    print('bill amount',mainbill)
